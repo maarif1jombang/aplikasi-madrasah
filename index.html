@@ -75,7 +75,7 @@
         
         <!-- Header Mengambang (Floating Card) -->
         <div class="max-w-5xl mx-auto px-3 md:px-8 pt-4 w-full">
-            <header class="bg-white border border-gray-200 rounded-2xl px-3 md:px-4 py-3 md:py-3.5 flex items-center shadow-sm min-h-[64px] md:min-h-[72px]">
+            <header class="bg-white border border-gray-200 rounded-xl px-3 md:px-4 py-3 md:py-3.5 flex items-center shadow-sm min-h-[64px] md:min-h-[72px]">
                 <div class="flex items-center gap-3 w-full">
                     
                     <!-- Ikon Kotak (Home) -->
@@ -106,7 +106,7 @@
                         <i data-lucide="search" class="h-4 w-4 text-gray-400"></i>
                     </div>
                     <input type="text" id="searchInput" 
-                        class="block w-full pl-9 pr-3 py-2 border border-gray-200 rounded-xl leading-5 bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand text-sm transition-all shadow-sm" 
+                        class="block w-full pl-9 pr-3 py-2 border border-gray-200 rounded-full leading-5 bg-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand text-sm transition-all shadow-sm" 
                         placeholder="Cari aplikasi atau deskripsi...">
                 </div>
 
@@ -120,7 +120,7 @@
 
     <!-- Konten Utama (List Aplikasi) -->
     <main class="flex-grow w-full">
-        <div class="max-w-5xl mx-auto px-3 md:px-8 pt-2 pb-12 w-full" id="contentContainer">
+        <div class="max-w-5xl mx-auto px-3 md:px-8 pt-2 pb-10 w-full" id="contentContainer">
             <!-- Konten akan di-render di sini oleh JS -->
         </div>
     </main>
@@ -249,10 +249,10 @@
                         <div class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-brand-light flex items-center justify-center text-brand flex-shrink-0 group-hover:bg-brand group-hover:text-white transition-colors duration-200">
                             <i data-lucide="${iconName}" class="w-5 h-5"></i>
                         </div>
-                        <div class="flex flex-col justify-center">
-                            <h3 class="font-semibold text-gray-800 text-[13px] md:text-sm group-hover:text-brand transition-colors leading-tight">${item.title}</h3>
-                            <p class="text-[11px] md:text-xs text-gray-500 mt-0.5 line-clamp-1 leading-tight">${item.desc}</p>
-                        </div>
+                        <div class="flex flex-col justify-center flex-1 min-w-0">
+							<h3 class="font-semibold text-gray-800 text-[13px] md:text-sm truncate group-hover:text-brand transition-colors duration-200 leading-tight">${item.title}</h3>
+							<p class="text-[11px] md:text-xs text-gray-500 mt-0.5 leading-tight line-clamp-1">${item.desc}</p>
+						</div>
                     </div>
                     <div class="flex items-center gap-0.5">
                         <!-- Tombol Salin Link -->
@@ -307,7 +307,7 @@
                     const sectionHTML = `
                         <div class="mb-6">
                             <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3 px-1">${category}</h2>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2.5 md:gap-3">
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 md:gap-3">
                                 ${items.map(item => createCardHTML(item)).join('')}
                             </div>
                         </div>
@@ -317,7 +317,7 @@
             } else {
                 // Tampilan List langsung tanpa label kategori
                 const listHTML = `
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2.5 md:gap-3 mt-2">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 md:gap-3 mt-2">
                         ${filteredData.map(item => createCardHTML(item)).join('')}
                     </div>
                 `;
