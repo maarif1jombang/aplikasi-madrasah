@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Aplikasi Madrasah</title>
-    <!-- Tailwind CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
+	<script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -90,7 +86,7 @@
                         <div class="flex items-center gap-1.5 text-[11px] md:text-xs text-gray-500 mt-0.5 font-medium">
                             <span class="hover:text-brand cursor-pointer transition-colors">Beranda</span>
                             <i data-lucide="chevron-right" class="w-3 h-3"></i>
-                            <span class="text-brand">48 link tersedia</span>
+                            <span class="text-brand">52 link tersedia</span>
                         </div>
                     </div>
                 </div>
@@ -150,7 +146,10 @@
             
             // Ujian
             { category: "Ujian", title: "PDUM", url: "https://pdum.kemenag.go.id/", desc: "Pangkalan Data Ujian Madrasah" },
-            { category: "Ujian", title: "ANBK", url: "https://anbk.kemendikdasmen.go.id/", desc: "Asesmen Nasional Berbasis Komputer" },
+            { category: "Ujian", title: "ANBK 2025", url: "https://anbk.kemendikdasmen.go.id/", desc: "Asesmen Nasional Berbasis Komputer" },
+			{ category: "Ujian", title: "ANBK 2024", url: "https://anbk.kemendikdasmen.go.id/anbk2024/", desc: "Asesmen Nasional Berbasis Komputer" },
+			{ category: "Ujian", title: "ANBK 2023", url: "https://anbk.kemendikdasmen.go.id/anbk2023/", desc: "Asesmen Nasional Berbasis Komputer" },
+			{ category: "Ujian", title: "ANBK 2022", url: "https://anbk.kemendikdasmen.go.id/anbk22/", desc: "Asesmen Nasional Berbasis Komputer" },
 			{ category: "Ujian", title: "Simulasi ANBK", url: "https://pusmendik.kemendikdasmen.go.id/an/simulasi_akm", desc: "Simulasi" },
 			{ category: "Ujian", title: "Dashboard Sulingjar", url: "https://dashboardslb.kemendikdasmen.go.id/login", desc: "Survei Lingkungan Belajar" },
 			{ category: "Ujian", title: "Login Sulingjar", url: "https://surveilingkunganbelajar.kemendikdasmen.go.id/login", desc: "Survei Lingkungan Belajar" },
@@ -189,8 +188,9 @@
 			{ category: "Akreditasi", title: "SiNaDita (Jatim)", url: "https://sinadita.banpdmjatim.id/login", desc: "Aplikasi Manajemen Akreditasi" },
             
             // Hiburan
-            { category: "Hiburan", title: "KLTRA TV", url: "https://kltratvos.blogspot.com/p/homie.html", desc: "Free Streaming Sports" },
-            { category: "Hiburan", title: "Streaming TV", url: "https://tv.tioprm.eu.org/", desc: "Streaming Televisi Indonesia Gratis" },
+            { category: "Hiburan", title: "KLTRA TV", url: "https://kltraid.pages.dev/", desc: "Free Streaming Sports" },
+			{ category: "Hiburan", title: "Zentara TV", url: "https://zentaratv.web.id/", desc: "Live TV Indonesia" },
+            { category: "Hiburan", title: "Streaming TV", url: "https://tv.tioprm.eu.org/", desc: "Streaming TV Gratis" },
             { category: "Hiburan", title: "Murrotal Mp3", url: "https://murrotal30juz.netlify.app/", desc: "Murottal Al-Qur'an 30 Juz Audio Lengkap" }
         ];
 
